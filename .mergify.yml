@@ -1,0 +1,70 @@
+queue_rules:
+  - name: default
+    conditions:
+      - status-success=build (compile-linux)
+      - status-success=build (compile-windows)
+      - status-success=build (compile-darwin)
+      - status-success=test
+      - status-success=staticcheck
+      - status-success=license
+
+pull_request_rules:
+  - name: Merge for developers
+    conditions:
+      - base~=(mainline|rename-commands)
+      - "#approved-reviews-by>=2"
+      - approved-reviews-by=@aws/aws-ecs-devx
+      - -approved-reviews-by~=author
+      - status-success=build (compile-linux)
+      - status-success=build (compile-windows)
+      - status-success=build (compile-darwin)
+      - status-success=test
+      - status-success=staticcheck
+      - status-success=license
+      - -label~=(WIP|do-not-merge)
+      - -title~=(WIP|wip)
+      - -merged
+      - -closed
+      - author!=dependabot[bot]
+    actions:
+      queue:
+        name: default
+        method: squash
+        commit_message_template: |
+          {{ title }} (#{{ number }})
+
+          {{ body }}
+  - name: Merge for bots
+    conditions:
+      - base=mainline
+      - "#approved-reviews-by>=1"
+      - "#changes-requested-reviews-by=0"
+      - status-success=build (compile-linux)
+      - status-success=build (compile-windows)
+      - status-success=build (compile-darwin)
+      - status-success=test
+      - status-success=staticcheck
+      - status-success=license
+      - author=dependabot[bot]
+      - -title~=(WIP|wip)
+      - -label~=(WIP|do-not-merge)
+      - -merged
+      - -closed
+    actions:
+      review:
+        type: APPROVE
+      queue:
+        name: default
+        method: squash
+        commit_message_template: |
+          {{ title }} (#{{ number }})
+
+          {{ body }}
+  - name: Ask Japanese docs reviews
+    conditions:
+      - files~=\.ja.md$
+      - -closed
+    actions:
+      request_reviews:
+        users:
+          - hkford

@@ -1,0 +1,247 @@
+site_name: AWS Copilot CLI
+site_description: 'Develop, Release and Operate Container Apps on AWS.'
+site_url: 'https://aws.github.io/copilot-cli/'
+repo_name: 'aws/copilot-cli'
+repo_url: 'https://github.com/aws/copilot-cli'
+edit_uri: 'edit/mainline/site/content'
+copyright: 'Copyright &copy; 2023 Amazon'
+docs_dir: 'site/content'
+site_dir: 'docs'
+extra_css:
+  - stylesheets/extra.css
+extra:
+  analytics:
+    provider: google
+    property: G-7S4JR3KFHK
+  alternate:
+    - name: English
+      link: ./en/
+      lang: en
+    - name: 日本語
+      link: ./ja/
+      lang: ja
+
+nav:
+  - Home: index.en.md
+  - Documentation:
+    - Overview: docs/overview.en.md
+    - Getting Started:
+      - Install Copilot: docs/getting-started/install.en.md
+      - (Optional) Verify the installation: docs/getting-started/verify.en.md
+      - Deploy your first application: docs/getting-started/first-app-tutorial.en.md
+    - Concepts:
+      - Overview: docs/concepts/overview.en.md
+      - Applications: docs/concepts/applications.en.md
+      - Environments: docs/concepts/environments.en.md
+      - Services: docs/concepts/services.en.md
+      - Jobs: docs/concepts/jobs.en.md
+      - Pipelines: docs/concepts/pipelines.en.md
+    - Credentials: docs/credentials.en.md
+    - Manifest:
+      - Overview: docs/manifest/overview.en.md
+      - Backend Service: docs/manifest/backend-service.en.md
+      - Load Balanced Web Service: docs/manifest/lb-web-service.en.md
+      - Request-Driven Web Service: docs/manifest/rd-web-service.en.md
+      - Scheduled Job: docs/manifest/scheduled-job.en.md
+      - Static Site: docs/manifest/static-site.en.md
+      - Worker Service: docs/manifest/worker-service.en.md
+      - Environment: docs/manifest/environment.en.md
+      - Pipeline: docs/manifest/pipeline.en.md
+    - Developing:
+      - Additional AWS Resources:
+        - Additional Workload Resources: docs/developing/addons/workload.en.md
+        - Additional Environment Resources: docs/developing/addons/environment.en.md
+        - Uploading Local Artifacts: docs/developing/addons/package.en.md
+      - Container Environment Variables: docs/developing/environment-variables.en.md
+      - Content Delivery: docs/developing/content-delivery.en.md
+      - Custom Environment Resources: docs/developing/custom-environment-resources.en.md
+      - Domain: docs/developing/domain.en.md
+      - Extend Copilot with Overrides:
+        - YAML Patch Overrides: docs/developing/overrides/yamlpatch.md
+        - CDK Overrides: docs/developing/overrides/cdk.md
+        - Task Definition Overrides: docs/developing/overrides/taskdef-overrides.md
+      - Internal Load Balancers: docs/developing/internal-albs.en.md
+      - Manifest Environment Variables: docs/developing/manifest-env-var.en.md
+      - Observability: docs/developing/observability.en.md
+      - Publish/Subscribe: docs/developing/publish-subscribe.en.md
+      - Secrets: docs/developing/secrets.en.md
+      - Service-to-Service Communication: docs/developing/svc-to-svc-communication.en.md
+      - Sidecars: docs/developing/sidecars.en.md
+      - Storage: docs/developing/storage.en.md
+    - Commands:
+      - Getting Started:
+        - docs: docs/commands/docs.en.md
+        - init: docs/commands/init.en.md
+      - Build:
+        - app init: docs/commands/app-init.en.md
+        - app upgrade: docs/commands/app-upgrade.en.md
+        - app delete: docs/commands/app-delete.en.md
+        - env init: docs/commands/env-init.en.md
+        - env override: docs/commands/env-override.en.md
+        - env package: docs/commands/env-package.en.md
+        - env delete: docs/commands/env-delete.en.md
+        - job init: docs/commands/job-init.en.md
+        - job override: docs/commands/job-override.md
+        - job package: docs/commands/job-package.en.md
+        - job delete: docs/commands/job-delete.en.md
+        - svc init: docs/commands/svc-init.en.md
+        - svc override: docs/commands/svc-override.en.md
+        - svc package: docs/commands/svc-package.en.md
+        - svc delete: docs/commands/svc-delete.en.md
+        - run local: docs/commands/run-local.en.md
+      - Release:
+        - env deploy: docs/commands/env-deploy.en.md
+        - job deploy: docs/commands/job-deploy.en.md
+        - pipeline init: docs/commands/pipeline-init.en.md
+        - pipeline deploy: docs/commands/pipeline-deploy.en.md
+        - pipeline ls: docs/commands/pipeline-ls.en.md
+        - pipeline override: docs/commands/pipeline-override.en.md
+        - pipeline show: docs/commands/pipeline-show.en.md
+        - pipeline status: docs/commands/pipeline-status.en.md
+        - pipeline delete: docs/commands/pipeline-delete.en.md
+        - svc deploy: docs/commands/svc-deploy.en.md
+        - deploy: docs/commands/deploy.en.md
+      - Operate:
+        - app ls: docs/commands/app-ls.en.md
+        - app show: docs/commands/app-show.en.md
+        - env ls: docs/commands/env-ls.en.md
+        - env show: docs/commands/env-show.en.md
+        - job ls: docs/commands/job-ls.en.md
+        - job logs: docs/commands/job-logs.en.md
+        - job run: docs/commands/job-run.en.md
+        - svc ls: docs/commands/svc-ls.en.md
+        - svc show: docs/commands/svc-show.en.md
+        - svc status: docs/commands/svc-status.en.md
+        - svc logs: docs/commands/svc-logs.en.md
+        - svc exec: docs/commands/svc-exec.en.md
+        - task run: docs/commands/task-run.en.md
+        - task exec: docs/commands/task-exec.en.md
+        - task delete: docs/commands/task-delete.en.md
+      - Extend:
+        - secret init: docs/commands/secret-init.en.md
+        - storage init: docs/commands/storage-init.en.md
+      - Settings:
+        - version: docs/commands/version.en.md
+        - completion: docs/commands/completion.en.md
+      - All:
+        - app delete: docs/commands/app-delete.en.md
+        - app init: docs/commands/app-init.en.md
+        - app ls: docs/commands/app-ls.en.md
+        - app show: docs/commands/app-show.en.md
+        - app upgrade: docs/commands/app-upgrade.en.md
+        - completion: docs/commands/completion.en.md
+        - deploy: docs/commands/deploy.en.md
+        - docs: docs/commands/docs.en.md
+        - env delete: docs/commands/env-delete.en.md
+        - env deploy: docs/commands/env-deploy.en.md
+        - env init: docs/commands/env-init.en.md
+        - env ls: docs/commands/env-ls.en.md
+        - env override: docs/commands/env-override.en.md
+        - env package: docs/commands/env-package.en.md
+        - env show: docs/commands/env-show.en.md
+        - init: docs/commands/init.en.md
+        - job delete: docs/commands/job-delete.en.md
+        - job deploy: docs/commands/job-deploy.en.md
+        - job init: docs/commands/job-init.en.md
+        - job logs: docs/commands/job-logs.en.md
+        - job ls: docs/commands/job-ls.en.md
+        - job override: docs/commands/job-override.md
+        - job package: docs/commands/job-package.en.md
+        - job run: docs/commands/job-run.en.md
+        - pipeline delete: docs/commands/pipeline-delete.en.md
+        - pipeline deploy: docs/commands/pipeline-deploy.en.md
+        - pipeline init: docs/commands/pipeline-init.en.md
+        - pipeline ls: docs/commands/pipeline-ls.en.md
+        - pipeline override: docs/commands/pipeline-override.en.md
+        - pipeline show: docs/commands/pipeline-show.en.md
+        - pipeline status: docs/commands/pipeline-status.en.md
+        - run local: docs/commands/run-local.en.md
+        - secret init: docs/commands/secret-init.en.md
+        - storage init: docs/commands/storage-init.en.md
+        - svc delete: docs/commands/svc-delete.en.md
+        - svc deploy: docs/commands/svc-deploy.en.md
+        - svc exec: docs/commands/svc-exec.en.md
+        - svc init: docs/commands/svc-init.en.md
+        - svc logs: docs/commands/svc-logs.en.md
+        - svc ls: docs/commands/svc-ls.en.md
+        - svc override: docs/commands/svc-override.en.md
+        - svc package: docs/commands/svc-package.en.md
+        - svc show: docs/commands/svc-show.en.md
+        - svc status: docs/commands/svc-status.en.md
+        - svc pause: docs/commands/svc-pause.en.md
+        - svc resume: docs/commands/svc-resume.en.md
+        - task delete: docs/commands/task-delete.en.md
+        - task exec: docs/commands/task-exec.en.md
+        - task run: docs/commands/task-run.en.md
+        - version: docs/commands/version.en.md
+  - Blogs:
+      - Release v1.33: blogs/release-v133.en.md
+      - Release v1.32: blogs/release-v132.en.md
+      - Release v1.31: blogs/release-v131.en.md
+      - Release v1.30: blogs/release-v130.en.md
+      - Release v1.29: blogs/release-v129.en.md
+      - Release v1.28: blogs/release-v128.en.md
+      - Release v1.27: blogs/release-v127.en.md
+      - AWS App Runner WAF: blogs/apprunner-waf.en.md
+      - Release v1.26: blogs/release-v126.en.md
+      - Release v1.25: blogs/release-v125.en.md
+      - Release v1.24: blogs/release-v124.en.md
+      - Release v1.23: blogs/release-v123.en.md
+      - Release v1.22: blogs/release-v122.en.md
+      - Release v1.21: blogs/release-v121.en.md
+      - Release v1.20: blogs/release-v120.en.md
+      - AWS App Runner VPC: blogs/apprunner-vpc.en.md
+      - Release v1.19: blogs/release-v119.en.md
+      - Release v1.18: blogs/release-v118.en.md
+      - Release v1.17: blogs/release-v117.en.md
+      - Release v1.16: blogs/release-v116.en.md
+  - Community:
+      - Get Involved: community/get-involved.en.md
+      - Guides and Resources: community/guides.en.md
+theme:
+  name: material
+  custom_dir: site/overrides
+  palette:
+    primary: white
+  font: false
+  icon:
+    logo: octicons/terminal-16
+  favicon: assets/images/cli.png
+  language: en
+  features:
+    - tabs
+    - instant
+    - navigation.tabs
+
+markdown_extensions:
+  - admonition
+  - meta
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      options:
+        custom_icons:
+          - site/overrides/.icons
+
+plugins:
+  - search
+  - redirects:
+      redirect_maps:
+        'docs/installing.md': 'docs/getting-started/install.en.md'
+        'docs/getting-started.md': 'docs/getting-started/first-app-tutorial.en.md'
+        'docs/commands/pipeline-update.md': 'docs/commands/pipeline-deploy.en.md'
+        'docs/developing/additional-aws-resources.md': 'docs/developing/addons/workload.en.md'
+        'docs/developing/service-discovery.md': 'docs/developing/svc-to-svc-communication.en.md'
+        'docs/developing/taskdef-overrides.md': 'docs/developing/overrides/taskdef-overrides.md'
+  - i18n:
+      default_language: en
+      languages:
+        en: english
+        ja: japanese
+      material_alternate: false
+  - macros:
+      include_dir: site/content/docs/include
