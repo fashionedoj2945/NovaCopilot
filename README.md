@@ -4,7 +4,7 @@
 
 <p align="center">
    <img src="https://img.shields.io/badge/NovaCopilot-AI_Assistant-8A2BE2" alt="Game Version">
-   <img src="https://img.shields.io/badge/Version-v.1.3.0%20(public%20beta)-blue" alt="Unity Version">
+   <img src="https://img.shields.io/badge/Version-v.1.3.2%20(public%20beta)-blue" alt="Unity Version">
    <img src="https://img.shields.io/badge/License-MIT-green" alt="License">
 </p>
 
